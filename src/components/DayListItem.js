@@ -1,6 +1,6 @@
 import React from 'react';
 import 'components/DayListItem.scss';
-import classNames from 'classnames/bind'
+import classNames from 'classnames/bind';
 
 export default function DayListItem(props) {
   const { name, spots, selected, setDay } = props;

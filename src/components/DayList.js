@@ -2,7 +2,7 @@ import React from 'react';
 import DayListItem from 'components/DayListItem'
 
 export default function DayList(props) {
-  const { days, day, setDay } = props;
+  const { days, setDay } = props;
 
   const calendarDays = days.map(day => {
     return (
