@@ -4,11 +4,9 @@ import 'components/InterviewerList.scss'
 
 
 
-
-
 const InterviewerList = function(props) {
 
-  const { interviewers, setInterviewer } = props;
+  const { interviewers, value, onChange } = props;
 
   const calendarInterviewers = interviewers.map(interviewer => {
 
@@ -17,8 +15,8 @@ const InterviewerList = function(props) {
             key={interviewer.id}
             name={interviewer.name}
             avatar={interviewer.avatar}
-            selected={interviewer.id===props.interviewer}
-            setInterviewer={(event) => setInterviewer(interviewer.id)}
+            selected={interviewer.id===value}
+            setInterviewer={(event) => onChange(interviewer.id)}
           />
     )
   });
