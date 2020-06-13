@@ -4,14 +4,12 @@ import "components/Application.scss";
 import DayList from "./DayList";
 import Appointment from 'components/Appointment';
 import {getAppointmentsForDay, getInterview, getInterviewersForDay} from 'helpers/selectors';
-import axios from 'axios';
 
 
 export default function Application(props) {
   
+
   const { state, setDay, bookInterview, cancelInterview } = useApplicationData()
-
-
 
   let appointments = getAppointmentsForDay(state, state.day);
   let interviewers = getInterviewersForDay(state, state.day);

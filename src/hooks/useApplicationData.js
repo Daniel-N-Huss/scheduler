@@ -25,6 +25,15 @@ const useApplicationData = function (){
     })
   }, []);
 
+  useEffect(() => {
+    axios.get('http://localhost:8001/api/days')
+    .then((res) => {
+      const days = res.data;
+      setState(prev => ({...prev, days: days}))
+    })
+
+  }, [state.appointments])
+
   const bookInterview = function(id, interview) {
     const appointment = {
       ...state.appointments[id],
