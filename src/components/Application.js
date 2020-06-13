@@ -9,29 +9,14 @@ import axios from 'axios';
 
 export default function Application(props) {
   
-  const { state, setState, setDay, bookInterview, cancelInterview } = useApplicationData()
+  const { state, setDay, bookInterview, cancelInterview } = useApplicationData()
 
-  useEffect(() => {
 
-    Promise.all([
-      axios.get('http://localhost:8001/api/days'),
-      axios.get('http://localhost:8001/api/appointments'),
-      axios.get('http://localhost:8001/api/interviewers')
-    ])
-    .then((all) => {
-      const [ days, appointments, interviewers ] = all;
-      const daysData = days.data;
-      const appointmentsData = appointments.data;
-      const interviewersData = interviewers.data;
-      setState(prev => ({...prev, days: daysData, appointments: appointmentsData, interviewers: interviewersData}))
-    })
-  }, []);
 
   let appointments = getAppointmentsForDay(state, state.day);
   let interviewers = getInterviewersForDay(state, state.day);
 
  
-
 
   const schedule = appointments.map((appointment) => {
     const interview = getInterview(state, appointment.interview);
