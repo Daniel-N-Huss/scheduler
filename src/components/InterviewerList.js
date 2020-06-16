@@ -1,12 +1,19 @@
 import React from 'react';
 import InterviewerListItem from 'components/InterviewerListItem'
 import 'components/InterviewerList.scss'
+import PropTypes from 'prop-types';
 
 
 
 const InterviewerList = function(props) {
 
   const { interviewers, value, onChange } = props;
+
+  InterviewerList.propTypes = {
+    value: PropTypes.number,
+    onChange: PropTypes.func.isRequired
+  }; 
+
 
   const calendarInterviewers = interviewers.map(interviewer => {
 
@@ -30,6 +37,7 @@ const InterviewerList = function(props) {
     </section>
   );
 }
+
 
 
 export default InterviewerList;
