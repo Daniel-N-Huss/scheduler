@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { getSpotsForDay } from "../../src/helpers/selectors";
 
+//This custom hook manages all state for our app
 const useApplicationData = function () {
   const [state, setState] = useState({
     day: "Monday",

@@ -10,6 +10,7 @@ import Confirm from "components/Appointment/Confirm";
 import Error from "components/Appointment/Error";
 
 const Appointment = function (props) {
+  //Consts for conditional rendering
   const CONFIRM = "CONFIRM";
   const CREATE = "CREATE";
   const DELETING = "DELETING";
