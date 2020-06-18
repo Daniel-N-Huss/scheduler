@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
 
 const Error = (props) => {
-
   const { message, onClose } = props;
 
   return (
@@ -10,14 +9,14 @@ const Error = (props) => {
         <h1 className="text--semi-bold">Error</h1>
         <h3 className="text--light">{message}</h3>
       </section>
-      <img 
+      <img
         className="appointment__error-close"
         src="images/close.png"
         alt="Close"
         onClick={onClose}
       />
     </main>
-  )
-}
+  );
+};
 
-export default Error
+export default Error;

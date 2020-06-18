@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const Status = (props) => {
-
-  const { message } = props
+  const { message } = props;
   return (
     <main className="appointment__card appointment__card--status">
-      <img 
+      <img
         className="appointment__status-image"
         src="images/status.png"
         alt="Loading"
@@ -13,6 +12,6 @@ const Status = (props) => {
       <h1 className="text--semi-bold">{message}</h1>
     </main>
   );
-}
+};
 
-export default Status
+export default Status;
