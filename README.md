@@ -1,8 +1,13 @@
 # Interview Scheduler
 
+This 
+
 ## Setup
 
 Install dependencies with `npm install`.
+
+Please check that the react-test-renderer package matches your version of react and react-dom on your host machine. 
+
 
 ## Running Webpack Development Server
 
@@ -20,4 +25,10 @@ npm test
 
 ```sh
 npm run storybook
+```
+
+## Running Cypress Tests
+
+```sh
+npm run cypress
 ```
